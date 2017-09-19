@@ -47,6 +47,7 @@ payload.NewDataSet.*Table map ((table , indexOfTable) -> {
                City: table.City  
                })]]></dw:set-payload>
                 </dw:transform-message>
+				<logger message="#[payload]" level="INFO" doc:name="Logger"/>
             </when>
             <otherwise>
                 <set-payload value="{&quot;Message&quot; : &quot;No Data Found&quot;}" doc:name="Set Payload"/>
